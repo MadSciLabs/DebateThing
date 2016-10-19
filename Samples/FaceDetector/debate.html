@@ -11,8 +11,10 @@
 
 <video style="display:none" id="webcam" autoplay width="640px" height="360px"></video>
 
-<a href="javascript:nose(0);">Nose Left Grow</a> | 
-<a href="javascript:nose(1);">Nose Right Grow</a>
+<a href="javascript:nose(0,'000');">Nose Left Small</a> | 
+<a href="javascript:nose(0,'050');">Nose Left Lrg</a> | 
+<a href="javascript:nose(1,'000');">Nose Right Small</a>
+<a href="javascript:nose(1,'050');">Nose Right Lrg</a>
 
 <br><br>
 
@@ -192,27 +194,19 @@ function load(_index, _nose) {
 
 }
 			
-function nose(_index) {
+function nose(_index,_size) {
 
 	if (_index == 0) {
 
 		_initNose0 = true;
-		noseSize0++;
 
-		if (noseSize0 < NUM_NOSES)
-		{
-			load(0, "models/nose" + noseSize0);
-		}
+		load(0, "models/" + _size);
 
 	} else {
 
 		_initNose1 = true;
-		noseSize1++;
 
-		if (noseSize1 < NUM_NOSES)
-		{
-			load(1, "models/nose" + noseSize1);
-		}
+		load(1, "models/" + _size);
 	}
 }
 

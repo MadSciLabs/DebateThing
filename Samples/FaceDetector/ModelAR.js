@@ -71,11 +71,11 @@ function VisageAR() {
 
 		//Module.initializeLicenseManager("226-424-596-618-836-796-313-074-283-413-370.vlc");
 		// init tracker
-		this.v_tracker_pom = new Module.VisageTracker("../../lib/Head Tracker.cfg");
+		//this.v_tracker_pom = new Module.VisageTracker("../../lib/Head Tracker.cfg");
 		//initialize licensing
 		//example how to initialize license key
-		v_faceData = new Module.FaceData();
-		v_tracker = this.v_tracker_pom;
+		//v_faceData = new Module.FaceData();
+		//v_tracker = this.v_tracker_pom;
 	
 
 		// RENDERER
