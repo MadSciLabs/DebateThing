@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>HTML5 MediaElement - YouTube</title>	
+	
+	<script src="jquery.js"></script>	
+	<script src="mediaelement-and-player.min.js"></script>
+	
+</head>
+<body>
+
+
+<video width="640" height="360" id="player1" autoplay>
+    
+    <!-- Pseudo HTML5 -->
+    <source type="video/youtube" src="https://www.youtube.com/watch?v=mqZ-fq7npo4" />
+
+</video>
+
+
+<script>
+
+$('video').mediaelementplayer({
+	success: function(media, node, player) {
+
+		console.log("hello");
+
+		//$('#' + node.id + '-mode').html('mode: ' + media.pluginType);
+	}
+});
+
+</script>
+
+</body>
+</html>
