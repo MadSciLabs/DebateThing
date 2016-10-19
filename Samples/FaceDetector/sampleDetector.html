@@ -917,6 +917,7 @@ function onModuleInitialized()
 	
 	//set up detector and licensing, valid license needs to be provided
 	//Module.initializeLicenseManager("492-209-201-108-805-336-029-013-891-329-010.vlc");
+	Module.initializeLicenseManager("/extras/907-495-332-673-403-834-024-561-827-124-065.vlc");
 	m_Detector = new Module.VisageDetector();
 	faceData = new Module.FaceDataVector();
 	for (var i = 0; i < 10; i++)
@@ -946,8 +947,10 @@ function startStream(stream){
 	}, true);
 		
 	var domURL = window.URL || window.webkitURL;
-	video.src = domURL ? domURL.createObjectURL(stream) : stream;
-		
+	//video.src = domURL ? domURL.createObjectURL(stream) : stream;
+				video.src  =  "../../debate_2.mp4";
+				video.type =  "video/mp4";
+	
 	video.play();
 }
 
